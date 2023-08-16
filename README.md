@@ -24,7 +24,6 @@
 |       |  └──classifier_free_guidance
 │       └──evaluation
 |          └──eval_models
-│   
 ├── SteeringAngle
 │   ├── SteeringAngle_64x64
 │   │   ├──CcGAN
@@ -44,7 +43,6 @@
 |       |  └──classifier_free_guidance
 │       └──evaluation
 |          └──eval_models
-|
 └── NIQE
     ├── UTKFace
     │   ├── NIQE_64x64
