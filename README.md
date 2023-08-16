@@ -63,7 +63,17 @@
 
 <!-- --------------------------------------------------------------- -->
 ## 2. Software Requirements
-
+| Item | Version |
+|---|---|
+| Python | 3.9 |
+| CUDA  | 11.4 |
+| cuDNN | 8.2|
+| numpy | 1.23.0 |
+| torch | 1.12.1 |
+| torchvision | 0.13.1 |
+| Pillow | 8.4.0 |
+| Matlab | 2020a |
+| accelearate | 0.18.0 |
 
 
 
