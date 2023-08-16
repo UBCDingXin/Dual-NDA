@@ -1,0 +1,129 @@
+MATLAB is running in headless mode.  Figure windows will not be displayed.
+ 
+要开始，请键入 doc。
+有关产品信息，请访问 www.mathworks.com。
+ 
+Starting parallel pool (parpool) using the 'Processes' profile ...
+Connected to parallel pool with 10 workers.
+历时 66.311283 秒。
+age=1, nfake=10000, NIQE=1.202, 0.90 Quantile=1.530 ; 
+历时 84.156443 秒。
+age=2, nfake=10000, NIQE=1.230, 0.90 Quantile=1.583 ; 
+历时 100.760583 秒。
+age=3, nfake=10000, NIQE=1.154, 0.90 Quantile=1.462 ; 
+历时 117.283302 秒。
+age=4, nfake=10000, NIQE=1.121, 0.90 Quantile=1.407 ; 
+历时 133.849091 秒。
+age=5, nfake=10000, NIQE=1.147, 0.90 Quantile=1.452 ; 
+历时 151.390279 秒。
+age=6, nfake=10000, NIQE=1.143, 0.90 Quantile=1.442 ; 
+历时 170.215211 秒。
+age=7, nfake=10000, NIQE=1.133, 0.90 Quantile=1.404 ; 
+历时 189.315515 秒。
+age=8, nfake=10000, NIQE=1.155, 0.90 Quantile=1.420 ; 
+历时 206.600226 秒。
+age=9, nfake=10000, NIQE=1.124, 0.90 Quantile=1.394 ; 
+历时 223.590854 秒。
+age=10, nfake=10000, NIQE=1.130, 0.90 Quantile=1.400 ; 
+历时 240.290043 秒。
+age=11, nfake=10000, NIQE=1.152, 0.90 Quantile=1.405 ; 
+历时 256.572330 秒。
+age=12, nfake=10000, NIQE=1.118, 0.90 Quantile=1.371 ; 
+历时 272.668099 秒。
+age=13, nfake=10000, NIQE=1.123, 0.90 Quantile=1.370 ; 
+历时 289.987044 秒。
+age=14, nfake=10000, NIQE=1.100, 0.90 Quantile=1.356 ; 
+历时 306.069404 秒。
+age=15, nfake=10000, NIQE=1.108, 0.90 Quantile=1.373 ; 
+历时 323.222825 秒。
+age=16, nfake=10000, NIQE=1.088, 0.90 Quantile=1.323 ; 
+历时 341.937723 秒。
+age=17, nfake=10000, NIQE=1.120, 0.90 Quantile=1.394 ; 
+历时 358.237217 秒。
+age=18, nfake=10000, NIQE=1.086, 0.90 Quantile=1.343 ; 
+历时 374.428839 秒。
+age=19, nfake=10000, NIQE=1.076, 0.90 Quantile=1.331 ; 
+历时 390.795845 秒。
+age=20, nfake=10000, NIQE=1.119, 0.90 Quantile=1.412 ; 
+历时 407.255650 秒。
+age=21, nfake=10000, NIQE=1.107, 0.90 Quantile=1.395 ; 
+历时 423.922981 秒。
+age=22, nfake=10000, NIQE=1.107, 0.90 Quantile=1.388 ; 
+历时 440.198607 秒。
+age=23, nfake=10000, NIQE=1.103, 0.90 Quantile=1.387 ; 
+历时 456.569515 秒。
+age=24, nfake=10000, NIQE=1.103, 0.90 Quantile=1.385 ; 
+历时 472.877811 秒。
+age=25, nfake=10000, NIQE=1.090, 0.90 Quantile=1.369 ; 
+历时 488.940455 秒。
+age=26, nfake=10000, NIQE=1.114, 0.90 Quantile=1.415 ; 
+历时 505.214831 秒。
+age=27, nfake=10000, NIQE=1.079, 0.90 Quantile=1.341 ; 
+历时 521.436682 秒。
+age=28, nfake=10000, NIQE=1.077, 0.90 Quantile=1.344 ; 
+历时 538.360361 秒。
+age=29, nfake=10000, NIQE=1.089, 0.90 Quantile=1.365 ; 
+历时 555.373773 秒。
+age=30, nfake=10000, NIQE=1.078, 0.90 Quantile=1.346 ; 
+历时 571.778938 秒。
+age=31, nfake=10000, NIQE=1.078, 0.90 Quantile=1.344 ; 
+历时 588.573408 秒。
+age=32, nfake=10000, NIQE=1.079, 0.90 Quantile=1.347 ; 
+历时 605.172795 秒。
+age=33, nfake=10000, NIQE=1.100, 0.90 Quantile=1.379 ; 
+历时 621.418407 秒。
+age=34, nfake=10000, NIQE=1.063, 0.90 Quantile=1.319 ; 
+历时 639.115038 秒。
+age=35, nfake=10000, NIQE=1.087, 0.90 Quantile=1.367 ; 
+历时 656.424453 秒。
+age=36, nfake=10000, NIQE=1.082, 0.90 Quantile=1.342 ; 
+历时 673.880222 秒。
+age=37, nfake=10000, NIQE=1.093, 0.90 Quantile=1.361 ; 
+历时 691.709036 秒。
+age=38, nfake=10000, NIQE=1.106, 0.90 Quantile=1.396 ; 
+历时 709.678229 秒。
+age=39, nfake=10000, NIQE=1.091, 0.90 Quantile=1.375 ; 
+历时 725.522094 秒。
+age=40, nfake=10000, NIQE=1.097, 0.90 Quantile=1.377 ; 
+历时 742.254969 秒。
+age=41, nfake=10000, NIQE=1.102, 0.90 Quantile=1.377 ; 
+历时 760.363263 秒。
+age=42, nfake=10000, NIQE=1.086, 0.90 Quantile=1.342 ; 
+历时 780.292842 秒。
+age=43, nfake=10000, NIQE=1.081, 0.90 Quantile=1.345 ; 
+历时 798.602458 秒。
+age=44, nfake=10000, NIQE=1.132, 0.90 Quantile=1.453 ; 
+历时 816.840168 秒。
+age=45, nfake=10000, NIQE=1.083, 0.90 Quantile=1.347 ; 
+历时 834.407439 秒。
+age=46, nfake=10000, NIQE=1.104, 0.90 Quantile=1.412 ; 
+历时 852.039413 秒。
+age=47, nfake=10000, NIQE=1.100, 0.90 Quantile=1.377 ; 
+历时 869.923593 秒。
+age=48, nfake=10000, NIQE=1.094, 0.90 Quantile=1.374 ; 
+历时 888.122589 秒。
+age=49, nfake=10000, NIQE=1.108, 0.90 Quantile=1.423 ; 
+历时 906.370110 秒。
+age=50, nfake=10000, NIQE=1.101, 0.90 Quantile=1.399 ; 
+历时 923.411838 秒。
+age=51, nfake=10000, NIQE=1.097, 0.90 Quantile=1.396 ; 
+历时 941.242945 秒。
+age=52, nfake=10000, NIQE=1.106, 0.90 Quantile=1.404 ; 
+历时 959.870816 秒。
+age=53, nfake=10000, NIQE=1.114, 0.90 Quantile=1.436 ; 
+历时 978.800917 秒。
+age=54, nfake=10000, NIQE=1.126, 0.90 Quantile=1.476 ; 
+历时 997.814053 秒。
+age=55, nfake=10000, NIQE=1.129, 0.90 Quantile=1.451 ; 
+历时 1016.853322 秒。
+age=56, nfake=10000, NIQE=1.132, 0.90 Quantile=1.458 ; 
+历时 1035.964144 秒。
+age=57, nfake=10000, NIQE=1.135, 0.90 Quantile=1.499 ; 
+历时 1055.548831 秒。
+age=58, nfake=10000, NIQE=1.179, 0.90 Quantile=1.550 ; 
+历时 1074.939348 秒。
+age=59, nfake=10000, NIQE=1.115, 0.90 Quantile=1.434 ; 
+历时 1095.354164 秒。
+age=60, nfake=10000, NIQE=1.140, 0.90 Quantile=1.482 ; 
+历时 1095.932409 秒。
+Parallel pool using the 'Processes' profile is shutting down.
