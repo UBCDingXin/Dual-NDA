@@ -63,6 +63,7 @@
 
 <!-- --------------------------------------------------------------- -->
 ## 2. Software Requirements
+Here, we provide a list of crucial software tools and packages employed in the conducted experiments.
 | Item | Version |
 |---|---|
 | Python | 3.9 |
