@@ -82,8 +82,8 @@ def parse_opts():
     parser.add_argument('--nda_d_nfake', type=int, default=-1)
     parser.add_argument('--nda_e_nfake', type=int, default=-1)
 
-    parser.add_argument('--path2badfake1', type=str, default='') 
-    parser.add_argument('--path2badfake2', type=str, default='')
+    parser.add_argument('--path2badfake1', type=str, default='None') 
+    parser.add_argument('--path2badfake2', type=str, default='None')
     parser.add_argument('--path2badfake3', type=str, default='None')
     parser.add_argument('--path2badfake4', type=str, default='None')
 

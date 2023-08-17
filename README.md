@@ -67,7 +67,7 @@
 
 <!-- --------------------------------------------------------------- -->
 ## 2. Software Requirements
-Here, we provide a list of crucial software environments and python packages employed in the conducted experiments. Please note that we use different computational platforms for our experiments.
+Here, we provide a list of crucial software environments and python packages employed in the conducted experiments. Please note that we use different computational platforms for our experiments. <br />
 
 **For computing NIQE scores and implementing the NIQE filtering:**
 | Item | Version |
@@ -125,54 +125,62 @@ Download the following h5 files and put them in `./datasets/SteeringAngle`.
 
 
 
+
 <!-- --------------------------------------------------------------- -->
 ## 4. Training
+As illustrated in the aforementioned repository structure, distinct training codes have been provided for various datasets. <br />
 
-As illustrated in the aforementioned repository structure, distinct training codes have been provided for various datasets. For clarity, we will exemplify the training process using the **Steering Angle (64x64)** experiment. <br />
-It's important to note that similar procedures can be followed for conducting experiments on other datasets.
 
-### (0) Download checkpoints for evaluation models
+<!------------------------------------>
+### (0) Download necessary checkpoints
+#### Evaluation Checkpoints
 
-Download the zip file of checkpoints of the evaluation models for Steering Angle (64x64) from [link](https://1drv.ms/u/s!Arj2pETbYnWQvMwHlZ362YyXnGuFXg?e=a0usQC). <br />
-Then, unzip the file and copy the folder `eval_models` to `./Dual-NDA/SteeringAngle/SteeringAngle_64x64/evaluation`. <br />
+For each experiment, download the corresponding zip file of checkpoints of the evaluation models. <br />
+Then, unzip the zip file and copy the folder `eval_models` to `./Dual-NDA/XXX/XXX_YYY/evaluation`, where `XXX` is the dataset name (either `UTKFace` or `SteeringAngle`) and `YYY` represents the image resolution (either `64x64` or `128x128`)
 
-We also provide the checkpoints of the evaluation models for other experiments as follows: <br />
+[SteeringAngle_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwHlZ362YyXnGuFXg?e=a0usQC) <br />
 [SteeringAngle_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwIx6X1bMIVTKAj5Q?e=SD9P0S) <br />
 [UTKFace_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMtFOZQSCMFuojGBmg?e=JsdVks) <br />
 [UTKFace_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwM7hKjcN0IVVRMPg?e=cbmCtP) <br />
 
-### (1) Baseline CcGAN
+<!------------------------------------>
+### (1) UTKFace (64x64)
+* **Baseline CcGAN (SVDL+ILI)** <br />
+
+
+* **Dual-NDA** <br />
+
+
+* **Vanilla NDA** <br />
+
+
+* **ReACGAN and ADCGAN** <br />
+
+
+* **ADM-G (Classifier Guidance)** <br />
+
+    
+* **CFG (Classifier-Free Guidance)** <br />
+
+
+<!------------------------------------>
+### (2) UTKFace (128x128)
+
+
+
+<!------------------------------------>
+### (3) Steering Angle (64x64)
+
+
+
+<!------------------------------------>
+### (4) Steering Angle (128x128)
 
 
 
 
-### (2) Dual-NDA
-#### (2.1) Generating Type II negative samples
 
 
-#### (2.2) Train CcGANs with Dual-NDA
-
-
-
-### (3) Vanilla NDA
-
-
-
-
-### (4) ReACGAN and ADCGAN
-
-
-ReACGAN.yaml is modified from https://github.com/POSTECH-CVLab/PyTorch-StudioGAN/blob/master/src/configs/Papa_ImageNet/ReACGAN.yaml
-
-ADCGAN.yaml is modified from https://github.com/POSTECH-CVLab/PyTorch-StudioGAN/blob/master/src/configs/CIFAR100/ReACGAN-ADC-DiffAug.yaml
-
-
-### (5) ADM-G (Classifier Guidance)
-
-
-
-
-### (6) Classifier-Free Guidance
 
 
 

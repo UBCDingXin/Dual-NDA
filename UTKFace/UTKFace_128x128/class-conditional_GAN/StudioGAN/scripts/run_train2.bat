@@ -6,12 +6,8 @@
 
 @echo off
 
-set ROOT_PREFIX=<Your_Path>/Dual-NDA/UTKFace/UTKFace_64x64
+set ROOT_PREFIX=<Your_Path>/Dual-NDA/UTKFace/UTKFace_128x128
 set DATA_PATH=<Your_Path>/Dual-NDA/datasets/UTKFace
-set EVAL_PATH=%ROOT_PREFIX%/evaluation/eval_models
-set CKPT_EVAL_FID_PATH=%EVAL_PATH%/ckpt_AE_epoch_200_seed_2020_CVMode_False.pth
-set CKPT_EVAL_LS_PATH=%EVAL_PATH%/ckpt_PreCNNForEvalGANs_ResNet34_regre_epoch_200_seed_2020_CVMode_False.pth
-set CKPT_EVAL_Div_PATH=%EVAL_PATH%/ckpt_PreCNNForEvalGANs_ResNet34_class_epoch_200_seed_2020_classify_5_races_CVMode_False.pth
 
 set GAN_NAME=ADCGAN
 set CONFIG_PATH=./configs/%GAN_NAME%.yaml

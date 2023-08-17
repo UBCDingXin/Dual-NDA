@@ -6,13 +6,13 @@
 
 @echo off
 
-set ROOT_PREFIX=<Your_Path>/Dual-NDA/UTKFace/UTKFace_64x64
+set ROOT_PREFIX=<Your_Path>/Dual-NDA/UTKFace/UTKFace_128x128
 set DATA_PATH=<Your_Path>/Dual-NDA/datasets/UTKFace
 set EVAL_PATH=%ROOT_PREFIX%/evaluation/eval_models
-set CKPT_EVAL_FID_PATH=%EVAL_PATH%/ckpt_AE_epoch_200_seed_2020_CVMode_False.pth
-set CKPT_EVAL_LS_PATH=%EVAL_PATH%/ckpt_PreCNNForEvalGANs_ResNet34_regre_epoch_200_seed_2020_CVMode_False.pth
-set CKPT_EVAL_Div_PATH=%EVAL_PATH%/ckpt_PreCNNForEvalGANs_ResNet34_class_epoch_200_seed_2020_classify_5_races_CVMode_False.pth
-set dump_niqe_path=<Your_Path>/Dual-NDA/NIQE/UTKFace/NIQE_filter_64x64/fake_data
+set CKPT_EVAL_FID_PATH=%EVAL_PATH%/ckpt_AE_epoch_200_seed_2021_CVMode_False.pth
+set CKPT_EVAL_LS_PATH=%EVAL_PATH%/ckpt_PreCNNForEvalGANs_ResNet34_regre_epoch_200_seed_2021_CVMode_False.pth
+set CKPT_EVAL_Div_PATH=%EVAL_PATH%/ckpt_PreCNNForEvalGANs_ResNet34_class_epoch_200_seed_2021_classify_5_races_CVMode_False.pth
+set dump_niqe_path=<Your_Path>/Dual-NDA/NIQE/UTKFace/NIQE_filter_128x128/fake_data
 
 set GAN_NAME=ReACGAN
 set CONFIG_PATH=./configs/%GAN_NAME%.yaml
@@ -20,8 +20,8 @@ set CONFIG_PATH=./configs/%GAN_NAME%.yaml
 wandb disabled
 
 @REM Set the following path correctly!
-set CKPT_G=./output/%GAN_NAME%/checkpoints/UK64-ReACGAN-train-<YOUR_TIME>/model=G-current-weights-step=40000.pth
-set CKPT_G_EMA=./output/%GAN_NAME%/checkpoints/UK64-ReACGAN-train-<YOUR_TIME>/model=G_ema-current-weights-step=40000.pth
+set CKPT_G=./output/%GAN_NAME%/checkpoints/UK64-ReACGAN-train-<YOUR_TIME>/model=G-current-weights-step=20000.pth
+set CKPT_G_EMA=./output/%GAN_NAME%/checkpoints/UK64-ReACGAN-train-<YOUR_TIME>/model=G_ema-current-weights-step=20000.pth
 
 python main.py -metrics none ^
     --data_dir %DATA_PATH% --cfg_file %CONFIG_PATH% --save_dir ./output/%GAN_NAME% ^
