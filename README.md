@@ -57,45 +57,104 @@
 ```
 
 
-
-
-
-
 <!-- --------------------------------------------------------------- -->
 ## 2. Software Requirements
-Here, we provide a list of crucial software tools and packages employed in the conducted experiments.
+Here, we provide a list of crucial software environments and python packages employed in the conducted experiments. Please note that we use different computational platforms for our experiments.
+
+**For all NIQE computations:**
 | Item | Version |
 |---|---|
+| OS | Win11 |
+| Python | 3.11.3 |
+| Matlab | 2023a |
+
+**For the CcGAN-related experiments:**
+| Item | Version |
+|---|---|
+| OS | Linux |
 | Python | 3.9 |
 | CUDA  | 11.4 |
-| cuDNN | 8.2|
 | numpy | 1.23.0 |
 | torch | 1.12.1 |
 | torchvision | 0.13.1 |
 | Pillow | 8.4.0 |
-| Matlab | 2020a |
 | accelearate | 0.18.0 |
+| matplotlib | 3.4.2 |
 
-
-
-
-
-
+**For the ReACGAN, ADCGAN, and ADM-G experiments:**
+| Item | Version |
+|---|---|
+| OS | Win11 |
+| Python | 3.11.3 |
+| CUDA  | 11.8 |
+| numpy | 1.23.5 |
+| torch | 2.0.1 |
+| torchvision | 0.15.2 |
+| Pillow | 9.5.0 |
+| accelearate | 0.20.3 |
+| wandb | 0.15.7 |
+| matplotlib | 3.7.1 |
 
 
 <!-- --------------------------------------------------------------- -->
 ## 3. Datasets
 
+We use the preprocessed datasets provided by Ding et. al. (2023). 
+
+### The preprocessed UTKFace Dataset (h5 file)
+Download the following h5 files and put them in `./datasets/UTKFace`.
+#### UTKFace (64x64)
+[UTKFace_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQstIzurW-LCFpGz5D7Q?e=X23ybx) <br />
+#### UTKFace (128x128)
+[UTKFace_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQstJGpTgNYrHE8DgDzA?e=d7AeZq) <br />
+
+### The Steering Angle dataset (h5 file)
+Download the following h5 files and put them in `./datasets/SteeringAngle`.
+#### Steering Angle (64x64)
+[SteeringAngle_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQstIyDTDpGA0CNiONkA?e=Ui5kUK) <br />
+#### Steering Angle (128x128)
+[SteeringAngle_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQstJ0j7rXhDtm6y4IcA?e=bLQh2e) <br />
+
+
+
+<!-- --------------------------------------------------------------- -->
+## 4. Training
+
+### (1) Baseline CcGAN
 
 
 
 
+### (2) Dual-NDA
 
 
 
+
+### (3) Vanilla NDA
+
+
+
+
+### (4) ReACGAN and ADCGAN
+
+
+
+
+### (5) ADM-G (Classifier Guidance)
+
+
+
+### (6) Classifier-Free Guidance
 
 
 
 
 <!-- --------------------------------------------------------------- -->
-## 4. Sample Usage
+## 4. Sampling and evaluation
+
+
+
+
+
+
+
