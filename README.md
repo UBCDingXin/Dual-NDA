@@ -199,7 +199,7 @@ Go to `./UTKFace/UTKFace_128x128/diffusion_models/classifier-free_guidance`. The
 
 <font color=Red>**!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**</font>
 
-![**!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**](https://placehold.co/15x15/f03c15/f03c15.png) `#f03c15`
+![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!`
 
 * **Baseline CcGAN (SVDL+ILI)** <br />
 Please go the the directory `./UTKFace/UTKFace_64x64/CcGAN/baseline`. Run the training script `./scripts/run_train.bat` for Windows or `./scripts/run_train.sh` for Linux.  We adopt the SNGAN network structure, the vanilla cGAN loss, the soft vicinity, and the improved label input mechanism. The models are trained for 40000 iterations, employing a batch size of 256. Specifically, the discriminator is updated twice for each iteration, while the generator is updated once. <br />
