@@ -69,14 +69,14 @@
 ## 2. Software Requirements
 Here, we provide a list of crucial software environments and python packages employed in the conducted experiments. Please note that we use different computational platforms for our experiments.
 
-**For all NIQE computations:**
+**For computing NIQE scores and implementing the NIQE filtering:**
 | Item | Version |
 |---|---|
 | OS | Win11 |
 | Python | 3.11.3 |
 | Matlab | 2023a |
 
-**For the CcGAN-related experiments:**
+**For training CcGAN:**
 | Item | Version |
 |---|---|
 | OS | Linux |
@@ -89,7 +89,7 @@ Here, we provide a list of crucial software environments and python packages emp
 | accelearate | 0.18.0 |
 | matplotlib | 3.4.2 |
 
-**For the ReACGAN, ADCGAN, and ADM-G experiments:**
+**For training ReACGAN, ADCGAN, ADM-G, and CFG:**
 | Item | Version |
 |---|---|
 | OS | Win11 |
@@ -128,12 +128,18 @@ Download the following h5 files and put them in `./datasets/SteeringAngle`.
 <!-- --------------------------------------------------------------- -->
 ## 4. Training
 
-As illustrated in the aforementioned repository structure, distinct training codes have been provided for various datasets. For clarity, we will exemplify the training process using the **Steering Angle (64x64)** experiment. It's important to note that similar procedures can be followed for conducting experiments on other datasets.
+As illustrated in the aforementioned repository structure, distinct training codes have been provided for various datasets. For clarity, we will exemplify the training process using the **Steering Angle (64x64)** experiment. <br />
+It's important to note that similar procedures can be followed for conducting experiments on other datasets.
 
-### (0) Some preparations
+### (0) Download checkpoints for evaluation models
 
+Download the zip file of checkpoints of the evaluation models for Steering Angle (64x64) from [link](https://1drv.ms/u/s!Arj2pETbYnWQvMwHlZ362YyXnGuFXg?e=a0usQC). <br />
+Then, unzip the file and copy the folder `eval_models` to `./Dual-NDA/SteeringAngle/SteeringAngle_64x64/evaluation`. <br />
 
-
+We also provide the checkpoints of the evaluation models for other experiments as follows: <br />
+[SteeringAngle_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwIx6X1bMIVTKAj5Q?e=SD9P0S) <br />
+[UTKFace_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMtFOZQSCMFuojGBmg?e=JsdVks) <br />
+[UTKFace_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwM7hKjcN0IVVRMPg?e=cbmCtP) <br />
 
 ### (1) Baseline CcGAN
 
@@ -156,6 +162,9 @@ As illustrated in the aforementioned repository structure, distinct training cod
 ### (4) ReACGAN and ADCGAN
 
 
+ReACGAN.yaml is modified from https://github.com/POSTECH-CVLab/PyTorch-StudioGAN/blob/master/src/configs/Papa_ImageNet/ReACGAN.yaml
+
+ADCGAN.yaml is modified from https://github.com/POSTECH-CVLab/PyTorch-StudioGAN/blob/master/src/configs/CIFAR100/ReACGAN-ADC-DiffAug.yaml
 
 
 ### (5) ADM-G (Classifier Guidance)
@@ -172,7 +181,10 @@ As illustrated in the aforementioned repository structure, distinct training cod
 ## 4. Sampling and evaluation
 
 
+### (1) SFID, Diversity, and Label Score
 
+
+### (2) NIQE
 
 
 

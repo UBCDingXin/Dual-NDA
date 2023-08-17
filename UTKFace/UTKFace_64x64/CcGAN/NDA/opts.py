@@ -77,10 +77,10 @@ def parse_opts():
     parser.add_argument('--nda_d', type=float, default=0) #coefficient for the bad fake loss; NIQE filtering
     parser.add_argument('--nda_e', type=float, default=0) #coefficient for the bad fake loss; MAE filtering
 
-    parser.add_argument('--path2badfake1', type=str, default='') 
-    parser.add_argument('--path2badfake2', type=str, default='')
-    parser.add_argument('--path2badfake3', type=str, default='None')
-    parser.add_argument('--path2badfake4', type=str, default='None')
+    parser.add_argument('--path2badfake1', type=str, default="None") 
+    parser.add_argument('--path2badfake2', type=str, default="None")
+    parser.add_argument('--path2badfake3', type=str, default="None")
+    parser.add_argument('--path2badfake4', type=str, default="None")
 
     
     ''' Sampling and Evaluation '''

@@ -446,13 +446,6 @@ def train_ccgan(kernel_sigma, kappa, train_images, train_labels, netG, netD, net
                 ############################################
                 ## NDA: build real-fake samples, nda_b
                 if nda_b>0 and niter>=nda_start_iter:
-                    # indx_rand = random.randint(0,2)
-                    # if indx_rand == 0:
-                    #     batch_real_fake_images = jigsaw_k(batch_real_images, k = 2)
-                    # elif indx_rand == 1:
-                    #     batch_real_fake_images = stitch(batch_real_images, k = 2)
-                    # elif indx_rand == 2:
-                    #     batch_real_fake_images = cutout(batch_real_images)
                     batch_real_fake_images = jigsaw_k(batch_real_images, k = 2)
                     # batch_real_fake_images = stitch(batch_real_images, k = 2)
                     # batch_real_fake_images = mixup(batch_real_images, alpha = 25.0)

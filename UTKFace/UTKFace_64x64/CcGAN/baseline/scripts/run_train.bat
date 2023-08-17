@@ -1,14 +1,17 @@
 ::===============================================================
 :: This is a batch script for running the program on windows! 
+:: Please set the following path correctly! 
+:: Recommend using absolute path!
 ::===============================================================
 
 @echo off
 
 set METHOD_NAME=CcGAN
-set ROOT_PREFIX=./Dual-NDA/UTKFace/UTKFace_64x64
+set ROOT_PREFIX=<Your_Path>/Dual-NDA/UTKFace/UTKFace_64x64
 set ROOT_PATH=%ROOT_PREFIX%/%METHOD_NAME%/baseline
-set DATA_PATH=./Dual-NDA/datasets/UTKFace
+set DATA_PATH=<Your_Path>/Dual-NDA/datasets/UTKFace
 set EVAL_PATH=%ROOT_PREFIX%/evaluation/eval_models
+set dump_niqe_path=<Your_Path>/Dual-NDA/NIQE/UTKFace/NIQE_64x64/fake_data
 
 set SEED=2021
 set NUM_WORKERS=0
@@ -30,7 +33,6 @@ set NUM_ACC_G=1
 
 set GAN_ARCH=SNGAN
 set LOSS_TYPE=vanilla
-
 set DIM_GAN=256
 set DIM_EMBED=128
 
@@ -47,4 +49,5 @@ python main.py ^
     --lr_g %LR_G% --lr_d %LR_D% --dim_gan %DIM_GAN% --dim_embed %DIM_EMBED% ^
     --kernel_sigma %SIGMA% --threshold_type soft --kappa %KAPPA% ^
     --gan_DiffAugment --gan_DiffAugment_policy color,translation,cutout ^
-    --comp_FID --FID_radius 0 --nfake_per_label 1000 --dump_fake_for_NIQE ^ %*
+    --comp_FID --FID_radius 0 --nfake_per_label 1000 ^
+    --dump_fake_for_NIQE --niqe_dump_path %dump_niqe_path% ^ %*

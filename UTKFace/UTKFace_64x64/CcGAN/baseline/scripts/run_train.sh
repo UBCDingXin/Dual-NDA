@@ -1,13 +1,16 @@
 #!/bin/bash
-
+# Please set the following path correctly! 
+# Recommend using absolute path!
 
 METHOD_NAME="CcGAN"
-ROOT_PREFIX="./Dual-NDA/UTKFace/UTKFace_64x64"
+ROOT_PREFIX="<Your_Path>/Dual-NDA/UTKFace/UTKFace_64x64"
 ROOT_PATH="${ROOT_PREFIX}/${METHOD_NAME}/baseline"
-DATA_PATH="./Dual-NDA/datasets/UTKFace"
+DATA_PATH="<Your_Path>/Dual-NDA/datasets/UTKFace"
 EVAL_PATH="${ROOT_PREFIX}/evaluation/eval_models"
+dump_niqe_path="<Your_Path>/Dual-NDA/NIQE/UTKFace/NIQE_64x64/fake_data"
 
-SEED=2020
+
+SEED=2021
 NUM_WORKERS=0
 MIN_LABEL=1
 MAX_LABEL=60
@@ -15,9 +18,9 @@ IMG_SIZE=64
 MAX_N_IMG_PER_LABEL=99999
 MAX_N_IMG_PER_LABEL_AFTER_REPLICA=200
 
-BATCH_SIZE_G=512
-BATCH_SIZE_D=512
-NUM_D_STEPS=1
+BATCH_SIZE_G=256
+BATCH_SIZE_D=256
+NUM_D_STEPS=2
 SIGMA=-1.0
 KAPPA=-1.0
 LR_G=1e-4
@@ -27,7 +30,6 @@ NUM_ACC_G=1
 
 GAN_ARCH="SNGAN"
 LOSS_TYPE="vanilla"
-
 DIM_GAN=256
 DIM_EMBED=128
 
@@ -45,4 +47,5 @@ python main.py \
     --kernel_sigma $SIGMA --threshold_type soft --kappa $KAPPA \
     --gan_DiffAugment --gan_DiffAugment_policy color,translation,cutout \
     --comp_FID --FID_radius 0 --nfake_per_label 1000 \
-    2>&1 | tee output_${GAN_ARCH}_${LOSS_TYPE}_${NITERS}.txt
+    --dump_fake_for_NIQE --niqe_dump_path $dump_niqe_path \
+

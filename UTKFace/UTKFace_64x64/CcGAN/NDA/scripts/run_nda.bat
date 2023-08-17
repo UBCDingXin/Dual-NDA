@@ -1,14 +1,17 @@
 ::===============================================================
 :: This is a batch script for running the program on windows! 
+:: Please set the following path correctly! 
+:: Recommend using absolute path!
 ::===============================================================
 
 @echo off
 
-set METHOD_NAME=CcGAN_v3
-set ROOT_PREFIX=C:/BaiduSyncdisk/Baidu_WD/CCGM/CcGAN_with_NDA/UTKFace/UTKFace_64x64
+set METHOD_NAME=CcGAN
+set ROOT_PREFIX=<Your_Path>/Dual-NDA/UTKFace/UTKFace_64x64
 set ROOT_PATH=%ROOT_PREFIX%/%METHOD_NAME%/NDA
-set DATA_PATH=C:/BaiduSyncdisk/Baidu_WD/datasets/CCGM_or_regression/UTKFace
+set DATA_PATH=<Your_Path>/Dual-NDA/datasets/UTKFace
 set EVAL_PATH=%ROOT_PREFIX%/evaluation/eval_models
+set dump_niqe_path=<Your_Path>/Dual-NDA/NIQE/UTKFace/NIQE_64x64/fake_data
 
 set SEED=2023
 set NUM_WORKERS=0
@@ -30,23 +33,14 @@ set NUM_ACC_G=1
 
 set GAN_ARCH=SNGAN
 set LOSS_TYPE=vanilla
-
-
 set DIM_GAN=256
 set DIM_EMBED=128
 
 
-set SETTING="Setup2"
-
-set fake_data_path_1=%ROOT_PREFIX%/%METHOD_NAME%/baseline/output/CcGAN_SNGAN_soft_si0.041_ka3600.000_vanilla_nDs2_nDa1_nGa1_Dbs256_Gbs256/bad_fake_data/niters40000/badfake_NIQE0.9_nfake60000.h5
-set fake_data_path_2=None
-set fake_data_path_3=None
-set fake_data_path_4=None
+set SETTING="Setup_vNDA"
 
 set nda_c_quantile=0.9
-set nfake_d=-1
 set nda_start_iter=0
-set dump_niqe_path=F:/LocalWD/CcGAN_TPAMI_NIQE/UTKFace/NIQE_64x64/fake_data
 
 set NITERS=40000
 set resume_niter=0
@@ -62,8 +56,6 @@ python main.py ^
     --kernel_sigma %SIGMA% --threshold_type soft --kappa %KAPPA% ^
     --gan_DiffAugment --gan_DiffAugment_policy color,translation,cutout ^
     --nda_start_iter %nda_start_iter% ^
-    --nda_a 0.7 --nda_b 0 --nda_c 0.1 --nda_d 0.2 --nda_e 0 --nda_c_quantile %nda_c_quantile% ^
-    --path2badfake1 %fake_data_path_1% --path2badfake2 %fake_data_path_2% --path2badfake3 %fake_data_path_3% --path2badfake4 %fake_data_path_4% ^
-    --eval_mode --comp_FID --FID_radius 0 --nfake_per_label 1000 --dump_fake_for_NIQE --niqe_dump_path %dump_niqe_path% ^ %*
-
-    @REM --dump_fake_for_NIQE --niqe_dump_path %dump_niqe_path%
+    --nda_a 0.25 --nda_b 0.75 --nda_c 0 --nda_d 0 --nda_e 0 --nda_c_quantile %nda_c_quantile% ^
+    --eval_mode --comp_FID --FID_radius 0 --nfake_per_label 1000 ^
+    --dump_fake_for_NIQE --niqe_dump_path %dump_niqe_path% ^ %*

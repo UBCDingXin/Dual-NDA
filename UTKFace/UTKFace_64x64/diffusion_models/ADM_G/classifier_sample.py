@@ -401,7 +401,7 @@ def main():
                 image_i_pil = Image.fromarray(image_i.transpose(1,2,0))
                 image_i_pil.save(filename_i)
             #end for i
-            sys.exit()
+            # sys.exit()
         
 
         #####################

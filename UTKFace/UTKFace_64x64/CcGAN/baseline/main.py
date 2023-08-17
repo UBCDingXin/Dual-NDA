@@ -425,7 +425,6 @@ if args.comp_FID:
             dump_fake_images_folder = save_images_folder + '/fake_images'
         else:
             dump_fake_images_folder = args.niqe_dump_path + '/fake_images'
-        # dump_fake_images_folder = save_images_folder + '/fake_images_for_NIQE_nfake_{}'.format(len(fake_images))
         os.makedirs(dump_fake_images_folder, exist_ok=True)
         for i in tqdm(range(len(fake_images))):
             label_i = int(fake_labels_assigned[i]*args.max_label)
@@ -436,7 +435,7 @@ if args.comp_FID:
             image_i_pil = Image.fromarray(image_i.transpose(1,2,0))
             image_i_pil.save(filename_i)
         #end for i
-        sys.exit()
+        # sys.exit()
 
     print("End sampling!")
     print("\n We got {} fake images.".format(len(fake_images)))
