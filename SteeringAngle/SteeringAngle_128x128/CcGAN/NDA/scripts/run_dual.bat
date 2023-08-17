@@ -7,42 +7,43 @@
 @echo off
 
 set METHOD_NAME=CcGAN
-set ROOT_PREFIX=<Your_Path>/Dual-NDA/UTKFace/UTKFace_64x64
+set ROOT_PREFIX=<Your_Path>/Dual-NDA/SteeringAngle/SteeringAngle_128x128
 set ROOT_PATH=%ROOT_PREFIX%/%METHOD_NAME%/NDA
-set DATA_PATH=<Your_Path>/Dual-NDA/datasets/UTKFace
+set DATA_PATH=<Your_Path>/Dual-NDA/datasets/SteeringAngle
 set EVAL_PATH=%ROOT_PREFIX%/evaluation/eval_models
-set dump_niqe_path=<Your_Path>/Dual-NDA/NIQE/UTKFace/NIQE_64x64/fake_data
+set niqe_dump_path=<Your_Path>/Dual-NDA/NIQE/SteeringAngle/NIQE_128x128/fake_data
 
 set SEED=2023
 set NUM_WORKERS=0
-set MIN_LABEL=1
-set MAX_LABEL=60
-set IMG_SIZE=64
-set MAX_N_IMG_PER_LABEL=2000
-set MAX_N_IMG_PER_LABEL_AFTER_REPLICA=200
+set MIN_LABEL=-80.0
+set MAX_LABEL=80.0
+set IMG_SIZE=128
+set MAX_N_IMG_PER_LABEL=9999
+set MAX_N_IMG_PER_LABEL_AFTER_REPLICA=0
 
-set BATCH_SIZE_G=256
-set BATCH_SIZE_D=256
+set BATCH_SIZE_G=128
+set BATCH_SIZE_D=128
 set NUM_D_STEPS=2
 set SIGMA=-1.0
-set KAPPA=-1.0
+set KAPPA=-5.0
 set LR_G=1e-4
 set LR_D=1e-4
-set NUM_ACC_D=1
-set NUM_ACC_G=1
+set NUM_ACC_D=2
+set NUM_ACC_G=2
 
-set GAN_ARCH=SNGAN
-set LOSS_TYPE=vanilla
+set GAN_ARCH="SAGAN"
+set LOSS_TYPE="hinge"
 set DIM_GAN=256
 set DIM_EMBED=128
 
 
-set SETTING="Setup_vNDA"
+set SETTING="Setup1"
 
-set nda_c_quantile=0.9
-set nda_start_iter=0
+set fake_data_path_1=%ROOT_PREFIX%/%METHOD_NAME%/baseline/output/SAGAN_soft_si0.029_ka1000.438_hinge_nDs2_nDa1_nGa1_Dbs256_Gbs256/bad_fake_data/niters20K/badfake_NIQE0.9_nfake17740.h5
+set nda_c_quantile=0.5
+set nda_start_iter=15000
 
-set NITERS=40000
+set NITERS=20000
 set resume_niter=0
 python main.py ^
     --setting_name %SETTING% --root_path %ROOT_PATH% --data_path %DATA_PATH% --eval_ckpt_path %EVAL_PATH% --seed %SEED% --num_workers %NUM_WORKERS% ^
@@ -56,6 +57,6 @@ python main.py ^
     --kernel_sigma %SIGMA% --threshold_type soft --kappa %KAPPA% ^
     --gan_DiffAugment --gan_DiffAugment_policy color,translation,cutout ^
     --nda_start_iter %nda_start_iter% ^
-    --nda_a 0.25 --nda_b 0.75 --nda_c 0 --nda_d 0 --nda_e 0 --nda_c_quantile %nda_c_quantile% ^
-    --eval_mode --comp_FID --FID_radius 0 --nfake_per_label 1000 ^
-    --dump_fake_for_NIQE --niqe_dump_path %dump_niqe_path% ^ %*
+    --nda_a 0.5 --nda_b 0 --nda_c 0.2 --nda_d 0.3 --nda_e 0 --nda_c_quantile %nda_c_quantile% ^
+    --path2badfake1 %fake_data_path_1% ^
+    --comp_FID --samp_batch_size 200 --dump_fake_for_NIQE --niqe_dump_path %niqe_dump_path% ^ %*

@@ -12,7 +12,7 @@ set EVAL_PATH=%ROOT_PREFIX%/evaluation/eval_models
 set CKPT_EVAL_FID_PATH=%EVAL_PATH%/ckpt_AE_epoch_200_seed_2020_CVMode_False.pth
 set CKPT_EVAL_LS_PATH=%EVAL_PATH%/ckpt_PreCNNForEvalGANs_ResNet34_regre_epoch_200_seed_2020_CVMode_False.pth
 set CKPT_EVAL_Div_PATH=%EVAL_PATH%/ckpt_PreCNNForEvalGANs_ResNet34_class_epoch_200_seed_2020_classify_5_races_CVMode_False.pth
-set dump_niqe_path=<Your_Path>/Dual-NDA/NIQE/UTKFace/NIQE_filter_64x64/fake_data
+set dump_niqe_path=<Your_Path>/Dual-NDA/NIQE/UTKFace/NIQE_64x64/fake_data
 
 set GAN_NAME=ReACGAN
 set CONFIG_PATH=./configs/%GAN_NAME%.yaml

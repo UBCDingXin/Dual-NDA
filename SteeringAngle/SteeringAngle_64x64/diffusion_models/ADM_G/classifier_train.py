@@ -207,7 +207,7 @@ def create_argparser():
         max_label=80.0,
         num_classes=221,
         noised=True,
-        iterations=150000,
+        iterations=20000,
         lr=3e-4,
         weight_decay=0.0,
         anneal_lr=False,

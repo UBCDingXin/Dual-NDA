@@ -6,8 +6,8 @@
 
 @echo off
 
-set ROOT_PREFIX=<Your_Path>/Dual-NDA/UTKFace/UTKFace_64x64
-set DATA_PATH=<Your_Path>/Dual-NDA/datasets/UTKFace
+set ROOT_PREFIX=<Your_Path>/Dual-NDA/SteeringAngle/SteeringAngle_64x64
+set DATA_PATH=<Your_Path>/Dual-NDA/datasets/SteeringAngle
 
 set GAN_NAME=ReACGAN
 set CONFIG_PATH=./configs/%GAN_NAME%.yaml

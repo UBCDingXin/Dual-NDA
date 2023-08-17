@@ -41,9 +41,9 @@ class Configurations(object):
         self.DATA = misc.make_empty_object()
 
         # dataset name \in ["CIFAR10", "CIFAR100", "Tiny_ImageNet", "CUB200", "ImageNet", "MY_DATASET"]
-        self.DATA.name = "SA64"
+        self.DATA.name = "SA128"
         # image size for training
-        self.DATA.img_size = 64
+        self.DATA.img_size = 128
         # number of classes in training dataset, if there is no explicit class label, DATA.num_classes = 1
         self.DATA.num_classes = 221
         # number of image channels in dataset. //image_shape[0]
