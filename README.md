@@ -1,4 +1,4 @@
-# **Code repository for Dual-NDA**
+# **The Code Repository for Dual-NDA**
 
 
 <!-- --------------------------------------------------------------- -->
@@ -8,6 +8,8 @@
 ├── UTKFace
 │   ├── UTKFace_64x64
 │   │   ├──CcGAN
+|   |   |  ├──baseline
+|   |   |  └──NDA
 │   │   ├──class-conditional_GAN
 |   |   |  └──StudioGAN
 |   |   ├──diffusion_models
@@ -17,6 +19,8 @@
 |   |      └──eval_models
 │   └── UTKFace_128x128
 │       ├──CcGAN
+|       |  ├──baseline
+|       |  └──NDA
 │       ├──class-conditional_GAN
 |       |  └──StudioGAN
 |       ├──diffusion_models
@@ -27,6 +31,8 @@
 ├── SteeringAngle
 │   ├── SteeringAngle_64x64
 │   │   ├──CcGAN
+|   |   |  ├──baseline
+|   |   |  └──NDA
 │   │   ├──class-conditional_GAN
 |   |   |  └──StudioGAN
 |   |   ├──diffusion_models
@@ -36,6 +42,8 @@
 |   |      └──eval_models
 │   └── SteeringAngle_128x128
 │       ├──CcGAN
+|       |  ├──baseline
+|       |  └──NDA
 │       ├──class-conditional_GAN
 |       |  └──StudioGAN
 |       ├──diffusion_models
@@ -99,7 +107,7 @@ Here, we provide a list of crucial software environments and python packages emp
 <!-- --------------------------------------------------------------- -->
 ## 3. Datasets
 
-We use the preprocessed datasets provided by Ding et. al. (2023). 
+We use the preprocessed datasets provided by [Ding et. al. (2023)](https://github.com/UBCDingXin/improved_CcGAN).
 
 ### The preprocessed UTKFace Dataset (h5 file)
 Download the following h5 files and put them in `./datasets/UTKFace`.
@@ -120,13 +128,23 @@ Download the following h5 files and put them in `./datasets/SteeringAngle`.
 <!-- --------------------------------------------------------------- -->
 ## 4. Training
 
+As illustrated in the aforementioned repository structure, distinct training codes have been provided for various datasets. For clarity, we will exemplify the training process using the **Steering Angle (64x64)** experiment. It's important to note that similar procedures can be followed for conducting experiments on other datasets.
+
+### (0) Some preparations
+
+
+
+
 ### (1) Baseline CcGAN
 
 
 
 
 ### (2) Dual-NDA
+#### (2.1) Generating Type II negative samples
 
+
+#### (2.2) Train CcGANs with Dual-NDA
 
 
 
@@ -144,6 +162,7 @@ Download the following h5 files and put them in `./datasets/SteeringAngle`.
 
 
 
+
 ### (6) Classifier-Free Guidance
 
 
@@ -158,3 +177,9 @@ Download the following h5 files and put them in `./datasets/SteeringAngle`.
 
 
 
+<!-- -------------------------------
+## References
+[1] Ding, Xin, et al. "CcGAN: Continuous Conditional Generative Adversarial Networks for Image Generation." International Conference on Learning Representations. 2021.  <br />
+[2] Lim, Jae Hyun, and Jong Chul Ye. "Geometric GAN." arXiv preprint arXiv:1705.02894 (2017).  <br />
+[3] Zhang, Han, et al. "Self-attention generative adversarial networks." International conference on machine learning. PMLR, 2019.  <br />
+[4] Zhao, Shengyu, et al. "Differentiable Augmentation for Data-Efficient GAN Training." Advances in Neural Information Processing Systems 33 (2020).  <br /> -->
