@@ -145,7 +145,7 @@ For each experiment, download the corresponding zip file of checkpoints of the e
 <!------------------------------------>
 ### (1) UTKFace (64x64)
 
-<font color=Red>**!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**</font>
+**!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**
 
 * **Baseline CcGAN (SVDL+ILI)** <br />
 Please go the the directory `./UTKFace/UTKFace_64x64/CcGAN/baseline`. Run the training script `./scripts/run_train.bat` for Windows or `./scripts/run_train.sh` for Linux.  We adopt the SNGAN network structure, the vanilla cGAN loss, the soft vicinity, and the improved label input mechanism. The models are trained for 40000 iterations, employing a batch size of 256. Specifically, the discriminator is updated twice for each iteration, while the generator is updated once. <br />
@@ -171,7 +171,7 @@ Go to `./UTKFace/UTKFace_64x64/diffusion_models/classifier-free_guidance`. Then,
 <!------------------------------------>
 ### (2) UTKFace (128x128)
 
-<font color=Red>**!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**</font>
+**!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**
 
 * **Baseline CcGAN (SVDL+ILI)** <br />
 We use the checkpoint of a pre-trained CcGAN provided by Ding et. al. (2023), which can be downloaded from [link](https://1drv.ms/u/s!Arj2pETbYnWQvMwTiwLAlsW-rNy6Ww?e=98q2eH). Unzip it and put the folder we get in `./output`.
@@ -197,43 +197,54 @@ Go to `./UTKFace/UTKFace_128x128/diffusion_models/classifier-free_guidance`. The
 <!------------------------------------>
 ### (3) Steering Angle (64x64)
 
-<font color=Red>**!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**</font>
-
-```diff
-- !!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!
-```
+**!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**
 
 * **Baseline CcGAN (SVDL+ILI)** <br />
-Please go the the directory `./UTKFace/UTKFace_64x64/CcGAN/baseline`. Run the training script `./scripts/run_train.bat` for Windows or `./scripts/run_train.sh` for Linux.  We adopt the SNGAN network structure, the vanilla cGAN loss, the soft vicinity, and the improved label input mechanism. The models are trained for 40000 iterations, employing a batch size of 256. Specifically, the discriminator is updated twice for each iteration, while the generator is updated once. <br />
-We also provide the checkpoint of the pre-trained CcGAN, which can be downloaded from [link](https://1drv.ms/u/s!Arj2pETbYnWQvMwOHj9m2OHRyvtetQ?e=jogJy7).
+Please go the the directory `./SteeringAngle/SteeringAngle_64x64/CcGAN/baseline`. Run the training script `./scripts/run_train.bat` for Windows or `./scripts/run_train.sh` for Linux.  We adopt the SAGAN network structure, the hinge cGAN loss, the soft vicinity, and the improved label input mechanism. The models are trained for 20000 iterations, employing a batch size of 512. Specifically, the discriminator is updated twice for each iteration, while the generator is updated once. <br />
+We also provide the checkpoint of the pre-trained CcGAN, which can be downloaded from [link](https://1drv.ms/u/s!Arj2pETbYnWQvMt_8y7CWRnmy9Sx0g?e=Z6A4ji).
 
 * **Dual-NDA** <br />
-**First**, go to the directory `./UTKFace/UTKFace_64x64/CcGAN/baseline`. Run the data generation script `./scripts/run_gene.bat` for Windows or `./scripts/run_gene.sh` for Linux. During this generation, 10,000 fake samples will be created for each of the 60 age values. These samples will be stored in `./NIQE/UTKFace/NIQE_filter_64X64/fake_data/fake_images`. <br />
-**Second**, go the directory `./NIQE/UTKFace/NIQE_filter_64X64`. Run the filtering scripts `./run_test1.bat` and `./run_test2.bat` sequentially. A `.h5` file with Type II negative samples will be generated to `./fake_data`. Move this `.h5` file to `./UTKFace/UTKFace_64x64/CcGAN/baseline/output/CcGAN_SNGAN_soft_si0.041_ka3600.000_vanilla_nDs2_nDa1_nGa1_Dbs256_Gbs256/bad_fake_data/niters40000`. <br />
-**Third**, go to the directory `./UTKFace/UTKFace_64x64/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 60000 iterations with the Dual-NDA mechanism being activated starting after the first 40000 iterations.
+**First**, go to the directory `./SteeringAngle/SteeringAngle_64x64/CcGAN/baseline`. Run the data generation script `./scripts/run_gene.bat` for Windows or `./scripts/run_gene.sh` for Linux. During this generation, 10,000 fake samples will be created for each of the 60 age values. These samples will be stored in `./NIQE/SteeringAngle/NIQE_filter_64X64/fake_data/fake_images`. <br />
+**Second**, go the directory `./NIQE/SteeringAngle/NIQE_filter_64X64`. Run the filtering scripts `./run_test1.bat` and `./run_test2.bat` sequentially. A `.h5` file with Type II negative samples will be generated to `./fake_data`. Move this `.h5` file to `./SteeringAngle/SteeringAngle_64x64/CcGAN/baseline/output/SAGAN_soft_si0.029_ka1000.438_hinge_nDs2_nDa1_nGa1_Dbs512_Gbs512/bad_fake_data/niters20000`. <br />
+**Third**, go to the directory `./SteeringAngle/SteeringAngle_64x64/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 20000 iterations with the Dual-NDA mechanism being activated starting at the very beginning.
 
 * **Vanilla NDA** <br />
-Go to the directory `./UTKFace/UTKFace_64x64/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
+Go to the directory `./SteeringAngle/SteeringAngle_64x64/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
 
 * **ReACGAN and ADCGAN** <br />
-Go to the directory `./UTKFace/UTKFace_64x64/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
+Go to the directory `./SteeringAngle/SteeringAngle_64x64/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
 
 * **ADM-G (Classifier Guidance)** <br />
-Go to `./UTKFace/UTKFace_64x64/diffusion_models/ADM_G`. Then, run the script `./scripts/run_exp.bat`. 
+Go to `./SteeringAngle/SteeringAngle_64x64/diffusion_models/ADM_G`. Then, run the script `./scripts/run_exp.bat`. 
     
 * **CFG (Classifier-Free Guidance)** <br />
-Go to `./UTKFace/UTKFace_64x64/diffusion_models/classifier-free_guidance`. Then, run the script `./scripts/run_exp.bat`. 
+Go to `./SteeringAngle/SteeringAngle_64x64/diffusion_models/classifier-free_guidance`. Then, run the script `./scripts/run_exp.bat`. 
 
 
 <!------------------------------------>
 ### (4) Steering Angle (128x128)
 
+**!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**
 
+* **Baseline CcGAN (SVDL+ILI)** <br />
+We use the checkpoint of a pre-trained CcGAN provided by Ding et. al. (2023), which can be downloaded from [link](https://1drv.ms/u/s!Arj2pETbYnWQvMwFIYoN-72rtEeWDw?e=QQp7Ih). Unzip it and put the folder we get in `./output`.
 
+* **Dual-NDA** <br />
+**First**, go to the directory `./SteeringAngle/SteeringAngle_128x128/CcGAN/baseline`. Run the data generation script `./scripts/run_gene.bat` for Windows or `./scripts/run_gene.sh` for Linux. During this generation, 10,000 fake samples will be created for each of the 60 age values. These samples will be stored in `./NIQE/SteeringAngle/NIQE_filter_128x128/fake_data/fake_images`. <br />
+**Second**, go the directory `./NIQE/SteeringAngle/NIQE_filter_128x128`. Run the filtering scripts `./run_test1.bat` and `./run_test2.bat` sequentially. A `.h5` file with Type II negative samples will be generated to `./fake_data`. Move this `.h5` file to `./SteeringAngle/SteeringAngle_128x128/CcGAN/baseline/output/SAGAN_soft_si0.029_ka1000.438_hinge_nDs2_nDa1_nGa1_Dbs256_Gbs256/bad_fake_data/niters20K`. <br />
+**Third**, go to the directory `./SteeringAngle/SteeringAngle_128x128/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 20000 iterations with the Dual-NDA mechanism being activated starting after the first 15000 iterations.
 
+* **Vanilla NDA** <br />
+Go to the directory `./SteeringAngle/SteeringAngle_128x128/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
 
+* **ReACGAN and ADCGAN** <br />
+Go to the directory `./SteeringAngle/SteeringAngle_128x128/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
 
-
+* **ADM-G (Classifier Guidance)** <br />
+Go to `./SteeringAngle/SteeringAngle_128x128/diffusion_models/ADM_G`. Then, run the script `./scripts/run_exp.bat`. 
+    
+* **CFG (Classifier-Free Guidance)** <br />
+Go to `./SteeringAngle/SteeringAngle_128x128/diffusion_models/classifier-free_guidance`. Then, run the script `./scripts/run_exp.bat`. 
 
 
 
@@ -242,10 +253,10 @@ Go to `./UTKFace/UTKFace_64x64/diffusion_models/classifier-free_guidance`. Then,
 
 
 ### (1) SFID, Diversity, and Label Score
-
+For each method, after the training, the evaluation usually automatically starts. 
 
 ### (2) NIQE
-
+After the above evaluation, fake images for computing NIQE are usually stored in `./NIQE/XX/NIQE_YY/fake_data`. Run batch scripts in `./NIQE/XX/NIQE_YY/run_test.bat` to computing the average NIQE scores. Here XX stands for the dataset name (either UTKFace or SteeringAngle), and YY represents the resolutions (either 64x64 or 128x128). 
 
 
 
