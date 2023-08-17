@@ -135,8 +135,7 @@ As illustrated in the aforementioned repository structure, distinct training cod
 ### (0) Download necessary checkpoints
 #### Evaluation Checkpoints
 
-For each experiment, download the corresponding zip file of checkpoints of the evaluation models. <br />
-Then, unzip the zip file and copy the folder `eval_models` to `./Dual-NDA/XXX/XXX_YYY/evaluation`, where `XXX` is the dataset name (either `UTKFace` or `SteeringAngle`) and `YYY` represents the image resolution (either `64x64` or `128x128`)
+For each experiment, download the corresponding zip file of checkpoints of the evaluation models. Then, unzip the zip file and copy the folder `eval_models` to `./Dual-NDA/XXX/XXX_YYY/evaluation`, where `XXX` is the dataset name (either `UTKFace` or `SteeringAngle`) and `YYY` represents the image resolution (either `64x64` or `128x128`)
 
 [SteeringAngle_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwHlZ362YyXnGuFXg?e=a0usQC) <br />
 [SteeringAngle_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwIx6X1bMIVTKAj5Q?e=SD9P0S) <br />
