@@ -251,18 +251,8 @@ Go to `./SteeringAngle/SteeringAngle_128x128/diffusion_models/classifier-free_gu
 <!-- --------------------------------------------------------------- -->
 ## 4. Sampling and evaluation
 
-
 ### (1) SFID, Diversity, and Label Score
-For each method, after the training, the evaluation usually automatically starts. 
+For all methods except ReACGAN and ADCGAN, after the training, the evaluation usually automatically starts. The evaluation setups are consistent with [Ding et. al. (2023)](https://github.com/UBCDingXin/improved_CcGAN).
 
 ### (2) NIQE
 After the above evaluation, fake images for computing NIQE are usually stored in `./NIQE/XX/NIQE_YY/fake_data`. Run batch scripts in `./NIQE/XX/NIQE_YY/run_test.bat` to computing the average NIQE scores. Here XX stands for the dataset name (either UTKFace or SteeringAngle), and YY represents the resolutions (either 64x64 or 128x128). 
-
-
-
-<!-- -------------------------------
-## References
-[1] Ding, Xin, et al. "CcGAN: Continuous Conditional Generative Adversarial Networks for Image Generation." International Conference on Learning Representations. 2021.  <br />
-[2] Lim, Jae Hyun, and Jong Chul Ye. "Geometric GAN." arXiv preprint arXiv:1705.02894 (2017).  <br />
-[3] Zhang, Han, et al. "Self-attention generative adversarial networks." International conference on machine learning. PMLR, 2019.  <br />
-[4] Zhao, Shengyu, et al. "Differentiable Augmentation for Data-Efficient GAN Training." Advances in Neural Information Processing Systems 33 (2020).  <br /> -->
