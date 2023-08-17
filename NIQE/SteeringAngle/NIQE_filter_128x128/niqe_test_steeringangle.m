@@ -11,7 +11,7 @@ model_path = ['models/', model_name];
 load(model_path);
 
 
-q = 0.8;
+q = 0.9;
 badfake_dir = [datadir_base, 'badfake_images_niqe_', num2str(q), '/'];
 [~, ~, ~] = mkdir(badfake_dir);
 
