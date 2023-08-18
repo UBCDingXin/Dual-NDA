@@ -68,13 +68,13 @@ def parse_opts():
     ''' NDA '''
     parser.add_argument('--nda_start_iter', type=int, default=0)
 
-    parser.add_argument('--nda_a', type=float, default=1) #coefficient for the original fake samples' loss
+    parser.add_argument('--nda_a', type=float, default=1) #coefficient for the original fake samples' loss; \bar{\lambda} in the paper
     
     parser.add_argument('--nda_b', type=float, default=0) #coefficient for the real-fake loss; 
-    parser.add_argument('--nda_c', type=float, default=0) #coefficient for the real-wrongLabel loss; 
-    parser.add_argument('--nda_c_quantile', type=float, default=0.9)
+    parser.add_argument('--nda_c', type=float, default=0) #coefficient for the real-wrongLabel loss; lambda_1 in the paper
+    parser.add_argument('--nda_c_quantile', type=float, default=0.9) #q_1 in the paper
     
-    parser.add_argument('--nda_d', type=float, default=0) #coefficient for the bad fake loss; NIQE filtering
+    parser.add_argument('--nda_d', type=float, default=0) #coefficient for the bad fake loss; NIQE filtering; lambda_2 in the paper
     parser.add_argument('--nda_e', type=float, default=0) #coefficient for the bad fake loss; MAE filtering
 
     parser.add_argument('--path2badfake1', type=str, default="None") 

@@ -21,7 +21,7 @@ set CLASSIFIER_FLAGS=--classifier_attention_resolutions 32,16,8 --classifier_dep
 python classifier_train.py ^
     --setup_name Setup1 ^
     --root_dir %ROOT_PATH% --data_dir %DATA_PATH% --image_size 64 ^
-    --iterations 100 --save_interval 100 ^
+    --iterations 20000 --save_interval 100 ^
     --batch_size 128 --lr 3e-4 --anneal_lr True --weight_decay 0.05 ^
     --log_interval 100 ^
     %CLASSIFIER_FLAGS% ^ %*

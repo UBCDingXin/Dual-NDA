@@ -154,7 +154,8 @@ We also provide the checkpoint of the pre-trained CcGAN, which can be downloaded
 * **Dual-NDA** <br />
 **First**, go to the directory `./UTKFace/UTKFace_64x64/CcGAN/baseline`. Run the data generation script `./scripts/run_gene.bat` for Windows or `./scripts/run_gene.sh` for Linux. During this generation, 10,000 fake samples will be created for each of the 60 age values. These samples will be stored in `./NIQE/UTKFace/NIQE_filter_64X64/fake_data/fake_images`. <br />
 **Second**, go the directory `./NIQE/UTKFace/NIQE_filter_64X64`. Run the filtering scripts `./run_test1.bat` and `./run_test2.bat` sequentially. A `.h5` file with Type II negative samples will be generated to `./fake_data`. Move this `.h5` file to `./UTKFace/UTKFace_64x64/CcGAN/baseline/output/CcGAN_SNGAN_soft_si0.041_ka3600.000_vanilla_nDs2_nDa1_nGa1_Dbs256_Gbs256/bad_fake_data/niters40000`. <br />
-**Third**, go to the directory `./UTKFace/UTKFace_64x64/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 60000 iterations with the Dual-NDA mechanism being activated starting after the first 40000 iterations.
+**Third**, go to the directory `./UTKFace/UTKFace_64x64/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 60000 iterations with the Dual-NDA mechanism being activated starting after the first 40000 iterations. <br />
+Note that, in the configuration, `nda_a` is the $\bar{\lambda}$, `nda_c` is the $\lambda_1$, `nda_d` represents $\lambda_2$, and `nda_c_quantile` corresponds to $q_1$.
 
 * **Vanilla NDA** <br />
 Go to the directory `./UTKFace/UTKFace_64x64/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
@@ -179,7 +180,8 @@ We use the checkpoint of a pre-trained CcGAN provided by Ding et. al. (2023), wh
 * **Dual-NDA** <br />
 **First**, go to the directory `./UTKFace/UTKFace_128x128/CcGAN/baseline`. Run the data generation script `./scripts/run_gene.bat` for Windows or `./scripts/run_gene.sh` for Linux. During this generation, 10,000 fake samples will be created for each of the 60 age values. These samples will be stored in `./NIQE/UTKFace/NIQE_filter_128x128/fake_data/fake_images`. <br />
 **Second**, go the directory `./NIQE/UTKFace/NIQE_filter_128x128`. Run the filtering scripts `./run_test1.bat` and `./run_test2.bat` sequentially. A `.h5` file with Type II negative samples will be generated to `./fake_data`. Move this `.h5` file to `./UTKFace/UTKFace_128x128/CcGAN/baseline/output/SAGAN_soft_si0.041_ka900.000_hinge_nDs4_nDa1_nGa1_Dbs256_Gbs256/bad_fake_data/niters20K`. <br />
-**Third**, go to the directory `./UTKFace/UTKFace_128x128/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 22500 iterations with the Dual-NDA mechanism being activated starting after the first 20000 iterations.
+**Third**, go to the directory `./UTKFace/UTKFace_128x128/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 22500 iterations with the Dual-NDA mechanism being activated starting after the first 20000 iterations. <br />
+Note that, in the configuration, `nda_a` is the $\bar{\lambda}$, `nda_c` is the $\lambda_1$, `nda_d` represents $\lambda_2$, and `nda_c_quantile` corresponds to $q_1$.
 
 * **Vanilla NDA** <br />
 Go to the directory `./UTKFace/UTKFace_128x128/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
@@ -206,7 +208,8 @@ We also provide the checkpoint of the pre-trained CcGAN, which can be downloaded
 * **Dual-NDA** <br />
 **First**, go to the directory `./SteeringAngle/SteeringAngle_64x64/CcGAN/baseline`. Run the data generation script `./scripts/run_gene.bat` for Windows or `./scripts/run_gene.sh` for Linux. During this generation, 10,000 fake samples will be created for each of the 60 age values. These samples will be stored in `./NIQE/SteeringAngle/NIQE_filter_64X64/fake_data/fake_images`. <br />
 **Second**, go the directory `./NIQE/SteeringAngle/NIQE_filter_64X64`. Run the filtering scripts `./run_test1.bat` and `./run_test2.bat` sequentially. A `.h5` file with Type II negative samples will be generated to `./fake_data`. Move this `.h5` file to `./SteeringAngle/SteeringAngle_64x64/CcGAN/baseline/output/SAGAN_soft_si0.029_ka1000.438_hinge_nDs2_nDa1_nGa1_Dbs512_Gbs512/bad_fake_data/niters20000`. <br />
-**Third**, go to the directory `./SteeringAngle/SteeringAngle_64x64/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 20000 iterations with the Dual-NDA mechanism being activated starting at the very beginning.
+**Third**, go to the directory `./SteeringAngle/SteeringAngle_64x64/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 20000 iterations with the Dual-NDA mechanism being activated starting at the very beginning. <br />
+Note that, in the configuration, `nda_a` is the $\bar{\lambda}$, `nda_c` is the $\lambda_1$, `nda_d` represents $\lambda_2$, and `nda_c_quantile` corresponds to $q_1$.
 
 * **Vanilla NDA** <br />
 Go to the directory `./SteeringAngle/SteeringAngle_64x64/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
@@ -232,7 +235,8 @@ We use the checkpoint of a pre-trained CcGAN provided by Ding et. al. (2023), wh
 * **Dual-NDA** <br />
 **First**, go to the directory `./SteeringAngle/SteeringAngle_128x128/CcGAN/baseline`. Run the data generation script `./scripts/run_gene.bat` for Windows or `./scripts/run_gene.sh` for Linux. During this generation, 10,000 fake samples will be created for each of the 60 age values. These samples will be stored in `./NIQE/SteeringAngle/NIQE_filter_128x128/fake_data/fake_images`. <br />
 **Second**, go the directory `./NIQE/SteeringAngle/NIQE_filter_128x128`. Run the filtering scripts `./run_test1.bat` and `./run_test2.bat` sequentially. A `.h5` file with Type II negative samples will be generated to `./fake_data`. Move this `.h5` file to `./SteeringAngle/SteeringAngle_128x128/CcGAN/baseline/output/SAGAN_soft_si0.029_ka1000.438_hinge_nDs2_nDa1_nGa1_Dbs256_Gbs256/bad_fake_data/niters20K`. <br />
-**Third**, go to the directory `./SteeringAngle/SteeringAngle_128x128/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 20000 iterations with the Dual-NDA mechanism being activated starting after the first 15000 iterations.
+**Third**, go to the directory `./SteeringAngle/SteeringAngle_128x128/CcGAN/NDA`. Run the training script `./scripts/run_dual.bat` for Windows or `./scripts/run_dual.sh` for Linux. During this process, we train CcGAN with Dual-NDA for 20000 iterations with the Dual-NDA mechanism being activated starting after the first 15000 iterations. <br />
+Note that, in the configuration, `nda_a` is the $\bar{\lambda}$, `nda_c` is the $\lambda_1$, `nda_d` represents $\lambda_2$, and `nda_c_quantile` corresponds to $q_1$.
 
 * **Vanilla NDA** <br />
 Go to the directory `./SteeringAngle/SteeringAngle_128x128/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
