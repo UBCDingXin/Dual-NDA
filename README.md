@@ -160,7 +160,7 @@ We also provide the checkpoint of the pre-trained CcGAN, which can be downloaded
 Go to the directory `./UTKFace/UTKFace_64x64/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
 
 * **ReACGAN and ADCGAN** <br />
-Go to the directory `./UTKFace/UTKFace_64x64/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
+Go to the directory `./UTKFace/UTKFace_64x64/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. Some detailed setups are stored in the config files, i.e., `./configs/ReACGAN.yaml` and `./configs/ADCGAN.yaml`.  We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN. 
 
 * **ADM-G (Classifier Guidance)** <br />
 Go to `./UTKFace/UTKFace_64x64/diffusion_models/ADM_G`. Then, run the script `./scripts/run_exp.bat`. 
@@ -185,7 +185,7 @@ We use the checkpoint of a pre-trained CcGAN provided by Ding et. al. (2023), wh
 Go to the directory `./UTKFace/UTKFace_128x128/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
 
 * **ReACGAN and ADCGAN** <br />
-Go to the directory `./UTKFace/UTKFace_128x128/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
+Go to the directory `./UTKFace/UTKFace_128x128/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. Some detailed setups are stored in the config files, i.e., `./configs/ReACGAN.yaml` and `./configs/ADCGAN.yaml`.  We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
 
 * **ADM-G (Classifier Guidance)** <br />
 Go to `./UTKFace/UTKFace_128x128/diffusion_models/ADM_G`. Then, run the script `./scripts/run_exp.bat`. 
@@ -212,7 +212,7 @@ We also provide the checkpoint of the pre-trained CcGAN, which can be downloaded
 Go to the directory `./SteeringAngle/SteeringAngle_64x64/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
 
 * **ReACGAN and ADCGAN** <br />
-Go to the directory `./SteeringAngle/SteeringAngle_64x64/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
+Go to the directory `./SteeringAngle/SteeringAngle_64x64/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. Some detailed setups are stored in the config files, i.e., `./configs/ReACGAN.yaml` and `./configs/ADCGAN.yaml`.  We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
 
 * **ADM-G (Classifier Guidance)** <br />
 Go to `./SteeringAngle/SteeringAngle_64x64/diffusion_models/ADM_G`. Then, run the script `./scripts/run_exp.bat`. 
@@ -238,7 +238,7 @@ We use the checkpoint of a pre-trained CcGAN provided by Ding et. al. (2023), wh
 Go to the directory `./SteeringAngle/SteeringAngle_128x128/CcGAN/NDA`. Run the training script `./scripts/run_nda.bat` for Windows or `./scripts/run_nda.sh` for Linux.
 
 * **ReACGAN and ADCGAN** <br />
-Go to the directory `./SteeringAngle/SteeringAngle_128x128/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
+Go to the directory `./SteeringAngle/SteeringAngle_128x128/class-conditional_GAN/StudioGAN`. Run the training script `./scripts/run_train1.bat` for ReACGAN or `./scripts/run_train2.bat` for ADCGAN. Some detailed setups are stored in the config files, i.e., `./configs/ReACGAN.yaml` and `./configs/ADCGAN.yaml`. We conduct the evaluation process by running `./scripts/run_eval1.bat` for ReACGAN or `./scripts/run_eval2.bat` for ADCGAN.
 
 * **ADM-G (Classifier Guidance)** <br />
 Go to `./SteeringAngle/SteeringAngle_128x128/diffusion_models/ADM_G`. Then, run the script `./scripts/run_exp.bat`. 
