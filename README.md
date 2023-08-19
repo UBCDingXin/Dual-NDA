@@ -132,17 +132,6 @@ As illustrated in the aforementioned repository structure, distinct training cod
 
 
 <!------------------------------------>
-### (0) Download necessary checkpoints
-#### Evaluation Checkpoints
-
-For each experiment, download the corresponding zip file of checkpoints of the evaluation models. Then, unzip the zip file and copy the folder `eval_models` to `./XXX/XXX_YYY/evaluation`, where `XXX` is the dataset name (either `UTKFace` or `SteeringAngle`) and `YYY` represents the image resolution (either `64x64` or `128x128`)
-
-[SteeringAngle_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwHlZ362YyXnGuFXg?e=a0usQC) <br />
-[SteeringAngle_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwIx6X1bMIVTKAj5Q?e=SD9P0S) <br />
-[UTKFace_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMtFOZQSCMFuojGBmg?e=JsdVks) <br />
-[UTKFace_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwM7hKjcN0IVVRMPg?e=cbmCtP) <br />
-
-<!------------------------------------>
 ### (1) UTKFace (64x64)
 
 **!!! Please accurately configure the path parameters within each `.bat` or `.sh` file.!!!**
@@ -255,8 +244,20 @@ Go to `./SteeringAngle/SteeringAngle_128x128/diffusion_models/classifier-free_gu
 <!-- --------------------------------------------------------------- -->
 ## 4. Sampling and evaluation
 
+<!------------------------------------>
+### (0) Download Evaluation Checkpoints
+
+For each experiment, download the corresponding zip file of checkpoints of the evaluation models. Then, unzip the zip file and copy the folder `eval_models` to `./XXX/XXX_YYY/evaluation`, where `XXX` is the dataset name (either `UTKFace` or `SteeringAngle`) and `YYY` represents the image resolution (either `64x64` or `128x128`)
+
+[SteeringAngle_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwHlZ362YyXnGuFXg?e=a0usQC) <br />
+[SteeringAngle_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwIx6X1bMIVTKAj5Q?e=SD9P0S) <br />
+[UTKFace_64x64_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMtFOZQSCMFuojGBmg?e=JsdVks) <br />
+[UTKFace_128x128_download_link](https://1drv.ms/u/s!Arj2pETbYnWQvMwM7hKjcN0IVVRMPg?e=cbmCtP) <br />
+
+<!------------------------------------>
 ### (1) SFID, Diversity, and Label Score
 For all methods except ReACGAN and ADCGAN, after the training, the evaluation usually automatically starts. The evaluation setups are consistent with [Ding et. al. (2023)](https://github.com/UBCDingXin/improved_CcGAN).
 
+<!------------------------------------>
 ### (2) NIQE
 After the above evaluation, fake images for computing NIQE are usually stored in `./NIQE/XX/NIQE_YY/fake_data`. Run batch scripts in `./NIQE/XX/NIQE_YY/run_test.bat` to computing the average NIQE scores. Here XX stands for the dataset name (either UTKFace or SteeringAngle), and YY represents the resolutions (either 64x64 or 128x128). 
