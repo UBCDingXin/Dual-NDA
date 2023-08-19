@@ -242,7 +242,7 @@ Go to `./SteeringAngle/SteeringAngle_128x128/diffusion_models/classifier-free_gu
 
 
 <!-- --------------------------------------------------------------- -->
-## 4. Sampling and evaluation
+## 4. Sampling and Evaluation
 
 <!------------------------------------>
 ### (0) Download Evaluation Checkpoints
