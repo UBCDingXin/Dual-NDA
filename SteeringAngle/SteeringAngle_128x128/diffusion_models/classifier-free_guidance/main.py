@@ -456,12 +456,13 @@ if args.comp_FID:
             if args.dump_fake_data:
                 with h5py.File(dump_fake_images_filename, "w") as f:
                     f.create_dataset('fake_images_i', data = fake_images_i, dtype='uint8', compression="gzip", compression_opts=6)
-                    f.create_dataset('fake_labels_i', data = fake_labels_i, dtype='int')
+                    f.create_dataset('fake_labels_i', data = fake_labels_i, dtype='float')
                     f.create_dataset('sample_time_i', data = np.array([sample_time_i]), dtype='float')
         else:
             with h5py.File(dump_fake_images_filename, "r") as f:
                 fake_images_i = f['fake_images_i'][:]
-                fake_labels_i = f['fake_labels_i'][:]
+                # fake_labels_i = f['fake_labels_i'][:]
+                fake_labels_i = float(curr_label) * np.ones(len(fake_images_i))
                 sample_time_i = f['sample_time_i'][0]
             assert len(fake_images_i) == len(fake_labels_i)
         ##end if
