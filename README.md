@@ -1,4 +1,4 @@
-# **The Code Repository for the paper "[Turning Waste into Wealth: Leveraging Low-Quality Samples for Enhancing Continuous Conditional Generative Adversarial Networks](https://arxiv.org/pdf/2308.10273.pdf)"**
+# **The Code Repository for "[Turning Waste into Wealth: Leveraging Low-Quality Samples for Enhancing Continuous Conditional Generative Adversarial Networks](https://arxiv.org/pdf/2308.10273.pdf)"**
 
 **[UPDATE! 2023-12-09]** Our paper has been accepted by AAAI 2024! <br />
 
