@@ -1,7 +1,21 @@
-# **The Code Repository for Dual-NDA**
+# **The Code Repository for the paper "[Turning Waste into Wealth: Leveraging Low-Quality Samples for Enhancing Continuous Conditional Generative Adversarial Networks](https://arxiv.org/pdf/2308.10273.pdf)"**
+
+**[UPDATE! 2023-12-09]** Our paper has been accepted by AAAI 2024! <br />
+
+--------------------------------------------------------
+If you use this code, please cite
+```text
+@article{ding2023turning,
+  title={Turning Waste into Wealth: Leveraging Low-Quality Samples for Enhancing Continuous Conditional Generative Adversarial Networks},
+  author={Ding, Xin and Wang, Yongwei and Xu, Zuheng},
+  journal={arXiv preprint arXiv:2308.10273},
+  year={2023}
+}
+```
 
 
 <!-- --------------------------------------------------------------- -->
+--------------------------------------------------------
 ## 1. Repository Structure
 
 ```
