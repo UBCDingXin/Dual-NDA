@@ -5,11 +5,14 @@
 --------------------------------------------------------
 If you use this code, please cite
 ```text
-@article{ding2023turning,
+@inproceedings{ding2024turning,
   title={Turning Waste into Wealth: Leveraging Low-Quality Samples for Enhancing Continuous Conditional Generative Adversarial Networks},
   author={Ding, Xin and Wang, Yongwei and Xu, Zuheng},
-  journal={arXiv preprint arXiv:2308.10273},
-  year={2023}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={10},
+  pages={11802--11810},
+  year={2024}
 }
 ```
 
